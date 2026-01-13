@@ -69,15 +69,11 @@ This application uses environment variables loaded via `password.env` or system 
 ### Required Variables
 - SECRET_KEY=your_flask_secret_key
 - OPENAI_API_KEY=your_openai_api_key
-
 - SUPABASE_URL=your_supabase_project_url
 - SUPABASE_API_KEY=your_supabase_service_key
-
 - MAIL_PASSWORD=your_gmail_app_password
-
 - WEBHOOK_ID=your_webhook_id
 
----
 
 ## Authentication & User Management
 
