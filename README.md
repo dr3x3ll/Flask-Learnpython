@@ -3,7 +3,6 @@
 Flask-LearnPython is a full-stack educational web application designed to help users learn Python through structured learning content, interactive stages, AI-assisted explanations, and secure code execution.  
 The platform includes user authentication, subscription-based access control, AI integration, payment handling, and sandboxed code execution.
 
----
 
 ## Features
 
@@ -19,7 +18,6 @@ The platform includes user authentication, subscription-based access control, AI
 - CSRF protection and request validation
 - SEO support (robots.txt, sitemap.xml)
 
----
 
 ## Tech Stack
 
@@ -51,7 +49,6 @@ The platform includes user authentication, subscription-based access control, AI
 - Markdown
 - python-dotenv
 
----
 
 ## Project Structure
 
@@ -69,7 +66,6 @@ Flask-LearnPython/
 ├── robot.txt  
 ├── README.md  
 
----
 
 ## Environment Variables
 
@@ -96,7 +92,6 @@ This application uses environment variables loaded via `password.env` or system 
 - Subscription tiers control access to routes and content
 - Daily AI usage is tracked per user
 
----
 
 ## Learning System
 
@@ -104,7 +99,6 @@ This application uses environment variables loaded via `password.env` or system 
 - Chapters, phases, and stages are rendered using Jinja templates
 - Access is restricted based on subscription tier
 
----
 
 ## AI Assistant
 
@@ -113,7 +107,6 @@ This application uses environment variables loaded via `password.env` or system 
 - Daily query limits enforced per user
 - Responses are rendered as HTML using Markdown
 
----
 
 ## Code Execution Sandbox
 
@@ -125,7 +118,6 @@ This application uses environment variables loaded via `password.env` or system 
 Sandbox endpoint:
 POST https://learnpython-sandbox.onrender.com/execute
 
----
 
 ## Payments (PayPal IPN)
 
@@ -134,7 +126,6 @@ POST https://learnpython-sandbox.onrender.com/execute
 - Stores payment records in Supabase (`paypal_orders` table)
 - Supports production and sandbox environments
 
----
 
 ## Security Measures
 
@@ -145,7 +136,6 @@ POST https://learnpython-sandbox.onrender.com/execute
 - Input validation
 - Blacklist-based code execution filtering
 
----
 
 ## Deployment
 
@@ -153,14 +143,12 @@ POST https://learnpython-sandbox.onrender.com/execute
 - Uses `Procfile` for production startup
 - Debug mode disabled in production
 
----
 
 ## Disclaimer
 
 This project is built for educational and portfolio purposes.
 Sensitive keys, credentials, and secrets must be handled securely.
 
----
 
 ## Author
 
