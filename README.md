@@ -56,6 +56,7 @@ The platform includes user authentication, subscription-based access control, AI
 ## Project Structure
 
 Flask-LearnPython/
+
 ├── app.py  
 ├── requirements.txt  
 ├── Procfile  
@@ -75,17 +76,15 @@ Flask-LearnPython/
 This application uses environment variables loaded via `password.env` or system environment.
 
 ### Required Variables
-SECRET_KEY=your_flask_secret_key
-OPENAI_API_KEY=your_openai_api_key
+- SECRET_KEY=your_flask_secret_key
+- OPENAI_API_KEY=your_openai_api_key
 
-SUPABASE_URL=your_supabase_project_url
-SUPABASE_API_KEY=your_supabase_service_key
+- SUPABASE_URL=your_supabase_project_url
+- SUPABASE_API_KEY=your_supabase_service_key
 
-MAIL_PASSWORD=your_gmail_app_password
+- MAIL_PASSWORD=your_gmail_app_password
 
-WEBHOOK_ID=your_webhook_id
-
-⚠️ Never commit `.env` or `password.env` files to GitHub.
+- WEBHOOK_ID=your_webhook_id
 
 ---
 
@@ -165,6 +164,6 @@ Sensitive keys, credentials, and secrets must be handled securely.
 
 ## Author
 
-Built by **Kong Yumin**  
+Built by **Kong Yu Min**  
 University of Glasgow  
 Python / Backend / Security-focused Learning Platform
