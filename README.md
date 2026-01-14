@@ -11,6 +11,14 @@ The application focuses on:
 - real integrations (AI, payments, database)
 
 
+
+## Overview
+Flask-LearnPython is a full-stack web application built with Flask that provides an interactive platform for learning Python.  
+The application combines structured learning content, AI-assisted explanations, and a secure Python execution sandbox to create a practical learning environment.
+
+The project focuses on real-world backend engineering concepts, including user authentication, tier-based access control, secure handling of user-submitted code, and integration with external services such as OpenAI, Supabase, and PayPal.
+
+
 ## Features
 ### User Authentication
 - Login / logout
@@ -123,8 +131,26 @@ Flask-Learnpython/
 └── README.md
 ```
 
-## Author
 
+## Limitations
+- The application is currently implemented as a single-file Flask app (`app.py`), which can become harder to maintain as the project grows.
+- The secure Python code execution sandbox relies on keyword blacklisting and an external execution service, which is not as robust as container-based isolation.
+- Automated tests are not yet implemented for routes, authentication, or API integrations.
+- The rate limiting and daily usage limits are stored in memory or database logic and are not designed for distributed or multi-instance deployments.
+- Secrets such as the Flask secret key are partially generated at runtime and should be managed more securely in a production environment.
+- The application assumes a single-instance deployment and does not include horizontal scaling support.
+
+
+## Future Improvements
+- Limit login attempts (e.g. lock the account or temporarily block login after 5 failed attempts) to prevent brute-force attacks.
+- Add email verification during registration to ensure users register with a valid email address.
+- Improve password security by enforcing stronger password rules (minimum length, symbols, numbers).
+- Add automatic logout after a period of inactivity to improve session security.
+- Add basic automated tests to check login, registration, and protected routes.
+- Improve error handling and logging to make debugging easier in production.
+
+
+## Author
 Built by **Kong Yu Min**  
 University of Glasgow  
 Python / Backend / Security-focused Learning Platform
