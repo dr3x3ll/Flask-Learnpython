@@ -1,26 +1,44 @@
 # Flask-LearnPython
 
-Flask-LearnPython is a full-stack educational web application designed to help users learn Python through structured learning content, interactive stages, AI-assisted explanations, and secure code execution.  
-The platform includes user authentication, subscription-based access control, AI integration, payment handling, and sandboxed code execution.
+Flask-LearnPython is an interactive learning platform designed to help users learn Python through structured lessons, examples, and AI assistance.
+The application focuses on:
+- clean backend architecture
+- secure user authentication
+- controlled execution of user-submitted Python code
+- real integrations (AI, payments, database)
 
 
 ## Features
+### User Authentication
+- Login / logout
+- Session-based authentication
+- Tier-based access control (free vs premium)
 
-- User registration, login, logout (session-based authentication)
-- Password reset via email (secure token-based flow)
-- Tier-based access control (Free / Standard / Additional / Full Access)
-- Structured learning phases, stages, and chapters
-- AI-powered Python assistant using OpenAI API
-- Daily query limits and rate limiting
-- Secure Python code execution via external sandbox service
-- PayPal IPN payment handling
-- Supabase-backed user and order storage
-- CSRF protection and request validation
-- SEO support (robots.txt, sitemap.xml)
+### AI Learning Assistant
+- AI-powered explanations and help
+- Integrated via OpenAI API
+  
+### Secure Python Sandbox
+- Executes user Python code in a restricted environment
+- Prevents unsafe operations
+- Designed with security in mind
+  
+### Payment Integration
+- PayPal integration for premium access
+- Tier upgrade logic
+  
+### Security
+- CSRF protection
+- Input validation
+- Secure session handling
+  
+### Web Application
+- Flask backend
+- HTML templates + static assets
+- SEO support (robots.txt, sitemap)
 
 
 ## Tech Stack
-
 **Backend**
 - Python
 - Flask
@@ -45,101 +63,62 @@ The platform includes user authentication, subscription-based access control, AI
 - PayPal IPN (Instant Payment Notification)
 
 
-## Project Structure
+## Requirements
+- Python 3.9+
+- pip
+- Virtual environment recommended
 
-Flask-LearnPython/
 
-├── app.py  
-├── requirements.txt  
-├── Procfile  
-├── content.json  
-├── content2.json  
-├── templates/  
-├── static/  
-├── python-sandbox/  
-├── sitemap.xml  
-├── robot.txt  
-├── README.md  
+## Installation
+```bash
+git clone https://github.com/minkong05/Flask-Learnpython.git
+cd Flask-Learnpython
+python3 -m venv venv
+source venv/bin/activate   # macOS / Linux
+# venv\Scripts\activate    # Windows
+pip install -r requirements.txt
+```
 
 
 ## Environment Variables
+Create a .env file in the project root.
 
-This application uses environment variables loaded via `password.env` or system environment.
-
-### Required Variables
-- SECRET_KEY=your_flask_secret_key
-- OPENAI_API_KEY=your_openai_api_key
-- SUPABASE_URL=your_supabase_project_url
-- SUPABASE_API_KEY=your_supabase_service_key
-- MAIL_PASSWORD=your_gmail_app_password
-- WEBHOOK_ID=your_webhook_id
-
-
-## Authentication & User Management
-
-- Users are stored in Supabase (`users` table)
-- Passwords are securely hashed using Werkzeug
-- Session-based authentication
-- Subscription tiers control access to routes and content
-- Daily AI usage is tracked per user
+### Example (.env.example):
+- `SECRET_KEY=your_flask_secret_key`
+- `OPENAI_API_KEY=your_openai_api_key`
+- `SUPABASE_URL=your_supabase_project_url`
+- `SUPABASE_API_KEY=your_supabase_service_key`
+- `MAIL_PASSWORD=your_gmail_app_password`
+- `WEBHOOK_ID=your_webhook_id`
 
 
-## Learning System
+## Running the App
+`python app.py`
+then open
+`http://127.0.0.1:5000`
 
-- Content is loaded dynamically from `content.json` and `content2.json`
-- Chapters, phases, and stages are rendered using Jinja templates
-- Access is restricted based on subscription tier
-
-
-## AI Assistant
-
-- `/chatgpt` endpoint integrates OpenAI ChatCompletion API
-- Python-focused assistant with strict response rules
-- Daily query limits enforced per user
-- Responses are rendered as HTML using Markdown
-
-
-## Code Execution Sandbox
-
-- User-submitted Python code is sent to an external sandbox service
-- Dangerous keywords are blocked
-- Code length is restricted
-- Execution timeouts are enforced
-
-Sandbox endpoint:
-POST https://learnpython-sandbox.onrender.com/execute
+## Secure Python Sandbox (Design Note)
+User-submitted Python code is executed in a restricted environment:
+- No filesystem access
+- No OS-level commands
+- Limited built-ins
+- Execution time controlled
+This prevents malicious code execution while still allowing educational experimentation.
 
 
-## Payments (PayPal IPN)
-
-- Uses PayPal Instant Payment Notification (IPN)
-- Verifies transactions via PayPal servers
-- Stores payment records in Supabase (`paypal_orders` table)
-- Supports production and sandbox environments
-
-
-## Security Measures
-
-- CSRF protection enabled
-- Password hashing
-- Rate limiting
-- Daily AI usage limits
-- Input validation
-- Blacklist-based code execution filtering
-
-
-## Deployment
-
-- Ready for deployment on platforms like Render or Heroku
-- Uses `Procfile` for production startup
-- Debug mode disabled in production
-
-
-## Disclaimer
-
-This project is built for educational and portfolio purposes.
-Sensitive keys, credentials, and secrets must be handled securely.
-
+## Project Structure
+```bash
+Flask-Learnpython/
+├── app.py                 # Main Flask application
+├── templates/             # HTML templates
+├── static/                # CSS, JS, images
+├── python_sandbox/        # Secure code execution logic
+├── requirements.txt
+├── robots.txt
+├── sitemap.xml
+├── .gitignore
+└── README.md
+```
 
 ## Author
 
