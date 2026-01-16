@@ -104,7 +104,7 @@ Create a .env file in the project root.
 
 
 ## Running the App
-`python app.py`
+`python3.12 app.py`
 then open
 `http://127.0.0.1:5000`
 
