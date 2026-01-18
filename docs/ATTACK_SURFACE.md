@@ -248,7 +248,7 @@ Receives PayPal Instant Payment Notifications and updates order records.
 
 
 ## Static & File Serving
-## /<filename>
+## /&lt;filename&gt;
 ### Description
 Serves files from application root.
 
