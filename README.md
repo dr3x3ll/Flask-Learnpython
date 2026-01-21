@@ -165,4 +165,4 @@ not just functional correctness.
 ## Author
 Built by **Kong Yu Min**  
 University of Glasgow  
-Python / Backend / Security-focused Learning Platform
+Python | Backend | Security-focused Learning Platform
