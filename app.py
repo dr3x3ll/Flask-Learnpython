@@ -518,10 +518,6 @@ def reset_with_token(token):
 @login_required
 @check_daily_limit(max_queries=20)
 def chatgpt():
-    if TESTING:
-        return jsonify({"error": "ChatGPT disabled during testing"}), 503
-    setup_openai()
-
     data = request.get_json(silent=True) or {}
     user_message = (data.get('message') or "").strip()  
 
@@ -529,7 +525,10 @@ def chatgpt():
         return jsonify({"status": "error", "message": "Message is required"}), 400
     if len(user_message) > 500:
         return jsonify({"status": "error", "message": "Your question is too long. Please shorten it."}), 400
-
+    if TESTING:
+        return jsonify({"error": "ChatGPT disabled during testing"}), 503
+    
+    setup_openai()
     messages = [
         {"role": "system","content": \
             "You are a helpful assistant specializing in Python programming. \
