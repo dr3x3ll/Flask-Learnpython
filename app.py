@@ -190,8 +190,11 @@ def check_daily_limit(max_queries=20):
     def decorator(f):
         @wraps(f)
         def wrapped(*args, **kwargs):
-            if not TESTING:
-                require_supabase()
+            if TESTING:
+                return f(*args, **kwargs)
+            
+            require_supabase()
+
             user_email = session.get('email')  # Get the currently logged-in user's email
             if not user_email:
                 return jsonify({"error": "Unauthorized"}), 401
@@ -290,6 +293,9 @@ def login():
     
     if not email or not password:
         return jsonify({"status": "error", "message": "Email or password missing"}), 400
+
+    if TESTING:
+        return jsonify({"status": "error", "message": "Invalid email or password"}), 401
 
     user = get_user_by_email(email)
     if user and check_password_hash(user.password_hash, password):
