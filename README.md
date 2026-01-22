@@ -1,14 +1,35 @@
 ![Python](https://img.shields.io/badge/python-3.12%2B-blue)
 ![Flask](https://img.shields.io/badge/flask-web%20framework-lightgrey)
 ![License](https://img.shields.io/badge/license-MIT-green)
-# Flask-LearnPython
 
+# Flask-LearnPython
 Flask-LearnPython is an interactive learning platform designed to help users learn Python through structured lessons, examples, and AI assistance.
 The application focuses on:
 - clean backend architecture
 - secure user authentication
 - controlled execution of user-submitted Python code
 - real integrations (AI, payments, database)
+
+## Security Focus
+
+This project was intentionally built with a **security-first mindset**, reflecting
+real-world DevSecOps and application security concerns.
+
+Security design decisions include:
+
+- Authentication and session handling with hashed passwords
+- CSRF protection and defensive input validation
+- Rate limiting and abuse prevention mechanisms
+- Secure handling of secrets via environment variables
+- CI-safe design with external services disabled during automated testing
+- Documented threat modeling and attack surface analysis (see `/docs`)
+- Sandboxed execution of user-submitted Python code with layered defenses
+
+The application is designed not just to function, but to be **analyzed, attacked,
+and defended** as part of learning secure software development.
+
+
+
 
 
 
