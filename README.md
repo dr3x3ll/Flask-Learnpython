@@ -1,6 +1,8 @@
 ![Python](https://img.shields.io/badge/python-3.12%2B-blue)
 ![Flask](https://img.shields.io/badge/flask-web%20framework-lightgrey)
+![CI](https://github.com/minkong05/Flask-Learnpython/actions/workflows/ci.yml/badge.svg)
 ![License](https://img.shields.io/badge/license-MIT-green)
+
 
 # Flask-LearnPython
 Flask-LearnPython is an interactive learning platform designed to help users learn Python through structured lessons, examples, and AI assistance.
@@ -137,17 +139,31 @@ This prevents malicious code execution while still allowing educational experime
 ## Project Structure
 ```bash
 Flask-Learnpython/
-├── app.py                 # Main Flask application
-├── templates/             # HTML templates
-├── static/                # CSS, JS, images
-├── python_sandbox/        # Secure code execution logic
+├── .github/workflows
+├── content
+├── docs
+│   ├── ATTACK_SURFACE.md
+│   ├── SANDBOX_SECURITY.md
+│   └── SECURITY_OVERVIEW.md
+├── python-sandbox
+├── scripts
+├── static
+├── templates
+├── tests
+├── app.py
 ├── requirements.txt
+├── README.md
 ├── robots.txt
 ├── sitemap.xml
-├── .gitignore
-└── README.md
+└── Procfile
 ```
 
+## Security Documentation
+Detailed security analysis is available in `/docs`:
+
+- **Security Overview** – system assets, trust boundaries, STRIDE threats
+- **Attack Surface Analysis** – route-level threat identification
+- **Sandbox Security Analysis** – risks of user-submitted code execution
 
 ## Security Testing
 This project includes attacker-style security tests covering:
